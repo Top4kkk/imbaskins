@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ImbaSkins - Drop Simulator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              rarity: {
+                common: '#b0c3d9',
+                industrial: '#5e98d9',
+                milspec: '#4b69ff',
+                restricted: '#8847ff',
+                classified: '#d32ce6',
+                covert: '#eb4b4b',
+                gold: '#e4ae39',
+              },
+              dark: {
+                900: '#0f1014',
+                800: '#16181f',
+                700: '#1e212b',
+                600: '#2a2e3a',
+              }
+            },
+            animation: {
+              'snow': 'snow 10s linear infinite',
+              'bounce-slow': 'bounce 3s infinite',
+            },
+            keyframes: {
+              snow: {
+                '0%': { transform: 'translateY(-10px) translateX(0)', opacity: '0' },
+                '10%': { opacity: '1' },
+                '100%': { transform: 'translateY(100vh) translateX(20px)', opacity: '0.3' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <style>
+      body {
+        background-color: #0f1014;
+        color: white;
+        font-family: 'Inter', sans-serif;
+        overflow-x: hidden;
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+      }
+      .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+      .case-scroll-container {
+        will-change: transform;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.1/",
+    "react": "https://esm.sh/react@^19.2.1",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.10.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.1/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
